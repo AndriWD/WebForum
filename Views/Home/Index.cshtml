@@ -1,0 +1,53 @@
+﻿@using WebForum.Infrastructure.Business;
+@using WebForum.Domain.Models;
+@model WebForum.ViewModels.HomeIndexViewTopics
+
+@{
+    ViewBag.Title = "Головна сторінка";
+
+
+}
+   
+<div class="row">
+    <div class="align-items-start">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <h3>Актуальні теми</h3>
+                @foreach (Topic topic in Model.TopicsInPage)
+                {
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">                           
+                            <div class="col-lg-10">
+                                <p class="card-text text-primary">@Html.ActionLink($"{ @topic.Title}", "Details", "Topics", new { id = topic.Id }, null)</p>
+                                <p class="panel-footer">
+                                    Створено @topic.AuthorTopic.UserName в @topic.TimeOfCreateOrLastUpdate
+                                </p>
+                            </div>
+                            <div class="col-lg-2 text-center">
+                                <p class="btn btn-link">
+                                    @Html.ActionLink("Перейти", "Details", "Topics", new { id = topic.Id }, null)
+                                </p>
+                                <div>
+                                    <p>Кількість дописів: @topic.CountOfPosts</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                }
+
+            </div>
+        </div>
+     </div>
+               
+                <div class="align-items-end text-center">
+                    <div class="btn-group">
+                        @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+                    </div>
+                </div>
+            </div>
+        
+

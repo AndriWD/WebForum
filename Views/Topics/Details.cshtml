@@ -1,0 +1,67 @@
+﻿@using WebForum.Infrastructure.Business;
+@using WebForum.Domain.Models;
+@model WebForum.ViewModels.TopicsDetailsViewTopicPosts
+
+
+
+<div>
+    <h3>@Model.Topic.Title</h3>
+</div>
+<div class="row">
+    <div class="col-lg-10">
+        <div>
+            <p>Автор: @Model.Topic.AuthorTopic.UserName в @Model.Topic.TimeOfCreateOrLastUpdate</p>
+        </div>
+    </div>
+    <div class="col-lg-2 text-center">
+        <div class="btn btn-default">
+            @Html.ActionLink("Редагувати", "Edit", "Topics", new { id = Model.Topic.Id }, new { @class = "col-10" })
+        </div>
+    </div>
+</div>
+<div>
+    <p>@Model.Topic.TextOfTopic</p>
+    
+</div>
+<div>
+    <h3 class="text-center">Обговорення:</h3>
+</div>
+<div>
+    @if (Model.PostsPerPage.Any())
+    {
+        foreach (Post post in Model.PostsPerPage)
+        {
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-lg-10">
+                        <p class="card-text">@post.Text</p>
+                        <p class="panel-footer">
+                            Створено @post.User.UserName в @post.TimeOfCreateOrLastUpdate
+                        </p>
+                    </div>
+                    <div class="col-lg-2 text-center">
+                        <p class="btn btn-default">
+                            @Html.ActionLink("Редагувати", "Edit", "Posts", new { id = post.Id }, null)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+<div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Добавити допис", "Create", "Posts", new { id = Model.Topic.Id }, new { @class = "col-10" })
+    </div>
+</div>
+<div class="text-center">
+    <div class="btn-group">
+        @Html.PageLinks(Model.PageInfo, x => Url.Action("Details", "Topics", new { page = x, id = Model.Topic.Id }, null))
+
+    </div>
+</div>
+    
+</div>
+            
+            
+

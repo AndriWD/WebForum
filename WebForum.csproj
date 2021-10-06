@@ -239,31 +239,6 @@
     <Compile Include="Infrastructure\DAL\PostRepository.cs" />
     <Compile Include="Infrastructure\DAL\TopicRepository.cs" />
     <Compile Include="Infrastructure\DAL\UnitOfWork.cs" />
-    <Compile Include="Migrations\202109301536552_db1.cs" />
-    <Compile Include="Migrations\202109301536552_db1.Designer.cs">
-      <DependentUpon>202109301536552_db1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110010749099_db2.cs" />
-    <Compile Include="Migrations\202110010749099_db2.Designer.cs">
-      <DependentUpon>202110010749099_db2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110011332545_db3.cs" />
-    <Compile Include="Migrations\202110011332545_db3.Designer.cs">
-      <DependentUpon>202110011332545_db3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110031453240_db4.cs" />
-    <Compile Include="Migrations\202110031453240_db4.Designer.cs">
-      <DependentUpon>202110031453240_db4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110031655133_db5.cs" />
-    <Compile Include="Migrations\202110031655133_db5.Designer.cs">
-      <DependentUpon>202110031655133_db5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110031702042_db6.cs" />
-    <Compile Include="Migrations\202110031702042_db6.Designer.cs">
-      <DependentUpon>202110031702042_db6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -274,6 +249,10 @@
     <Compile Include="ViewModels\TopicsDetailsViewTopicPosts.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-WebForum-20210930025436.mdf" />
+    <Content Include="App_Data\aspnet-WebForum-20210930025436_log.ldf">
+      <DependentUpon>aspnet-WebForum-20210930025436.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -344,33 +323,11 @@
     <Content Include="Views\Topics\DeniedAccess.cshtml" />
     <Content Include="Views\Posts\DeniedAccess.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109301536552_db1.resx">
-      <DependentUpon>202109301536552_db1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110010749099_db2.resx">
-      <DependentUpon>202110010749099_db2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110011332545_db3.resx">
-      <DependentUpon>202110011332545_db3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110031453240_db4.resx">
-      <DependentUpon>202110031453240_db4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110031655133_db5.resx">
-      <DependentUpon>202110031655133_db5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110031702042_db6.resx">
-      <DependentUpon>202110031702042_db6.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

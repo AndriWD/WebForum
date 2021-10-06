@@ -60,14 +60,7 @@ namespace WebForum.Domain.Models
         [NotMapped]
         public int CountOfPosts => Posts.Any() ? Posts.Count() : 0;
 
-        public ApplicationUser ApplicationUser
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
+        
         /// <summary>
         /// Конструктор
         /// </summary>

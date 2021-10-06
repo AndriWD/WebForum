@@ -28,14 +28,6 @@ namespace WebForum.Models
         /// </summary>
         public virtual ICollection<Post> Posts { get; set; }
 
-        public Topic Topic1
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public ApplicationUser()
         {
             Topics = new List<Topic>();

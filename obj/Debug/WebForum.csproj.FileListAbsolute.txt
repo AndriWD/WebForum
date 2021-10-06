@@ -155,13 +155,6 @@ C:\Users\andri\source\repos\WebForum\bin\ru\Microsoft.Owin.Security.Facebook.res
 C:\Users\andri\source\repos\WebForum\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\andri\source\repos\WebForum\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\andri\source\repos\WebForum\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db1.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db2.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db3.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db4.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db5.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.Migrations.db6.resources
-C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.csproj.GenerateResource.cache
 C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.csproj.CoreCompileInputs.cache
 C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.csproj.CopyComplete
 C:\Users\andri\source\repos\WebForum\obj\Debug\WebForum.dll

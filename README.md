@@ -1,0 +1,9 @@
+# WebForum
+Запуск проекту WebForum
+Взаємодія з користувачем в WebForum відбувається за допомогою Idenity, що суттєво спрощує роботу з користувачем і дає змогу за необхідності значно розширити наявний функціонал веб-програми. Також Identity додає до програми вже реалізований контекст даних за допомогою базового класу IdentetyDbContext<T> та клас наслідник ApplicationDbContext, який ми використовуємо в нашій програмі. Ми додали до програми ініціалізатор БД - AppDbIntilizer, наслідує базовий клас DropCreateDatabaseAlways, що кожного разу перезаписує БД тестовими користувачами/темами/постами. Щоб користувачі зберігалися в БД після зупинки програми потрібно відключити ініціалізатор в файлі Global.asax.cs строку 21 Database.SetInitializer<ApplicationDbContext>(new AppDbInitializer()); 
+Тестові користувачі
+User1 {Login= "user1@gmail.com", Password="123aA8-1"}
+User1 {Login= "user2@gmail.com", Password="123aA8-2"}
+User1 {Login= "user3@gmail.com", Password="123aA8-3"}
+User1 {Login= "user4@gmail.com", Password="123aA8-4"}
+User1 {Login= "user5@gmail.com", Password="123aA8-5"}
